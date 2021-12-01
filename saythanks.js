@@ -8,7 +8,7 @@ function saythanks() {
 	request.setRequestHeader('Content-type', 'application/json');
 
 	var params = {
-    	username: "ZELF - RIB Generator page",
+    	username: "Remerciementse",
     	avatar_url: "https://raw.githubusercontent.com/Poloin34/ZelfGenerateRib/master/favicon.png",
     	content: "**" + confirmation.toString() + "** te remercie !"
   	}
