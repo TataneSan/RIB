@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Zelf RIB Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	<script src="https://unpkg.com/pdf-lib"></script>
+	<script src="https://unpkg.com/downloadjs@1.4.7"></script>
+
+	<script type="text/javascript" src="pdfrib.js"></script>
+	<script type="text/javascript" src="saythanks.js"></script>
+</head>
+<body style="background-color: #0e0d0d; color: white">
+
+
+<div style="padding: 2rem;"></div>
+
+<div style="text-align: center;">
+ <img class="imgSize" src="tatanesan.png" width="100px" alt="Gaëtan Poloin Logo">
+	<div style="padding: 1rem"></div>
+	<span class="tohide" style="font-size: 25px; font-weight: 700;">Ce site web va vous permettre de générer votre RIB en quelques secondes.</span>
+	<span class="toshow" style="font-size: 30px; font-weight: 700;">Générez votre RIB</span>
+</div>
+
+<div class="tohide" style="padding: 3rem;"></div>
+<div class="toshow" style="padding: 1.5rem;"></div>
+
+<div style="font-size: 20px; height: 3rem; text-align: center;">
+	
+	<div style="padding: 2rem"></div>
+
+	<span>Inscrivez avec votre IBAN :</span>
+	<div style="padding: 0.2rem"></div>
+	<input required="required" type="text" name="iban" id="iban" placeholder="FR76167XXXXXXXXXXXXXXXXXXXX" style="width: 15rem">
+	
+	<div style="padding: 0.5rem"></div>
+
+	<span>Inscrivez votre prénom et votre nom :</span>
+	<div style="padding: 0.2rem"></div>
+	<input required="required" type="text" name="name" id="name" placeholder="John DOE" style="width: 15rem">
+	
+	<div style="padding: 0.5rem"></div>
+
+	<div class="screenModif" style="display: flex; justify-content: center; font-size: 20px">
+		<div>
+			<span>Inscrivez votre adresse :</span>
+			<div style="padding: 0.2rem"></div>
+			<input required="required" type="text" name="address" id="addressStreet" placeholder="69 rue des sauges" style="width: 15rem">	
+		</div>
+		<div style="padding-right: 3rem"></div>		
+		<div>
+			<span>Votre ville : :</span>
+			<div style="padding: 0.2rem"></div>
+			<input required="required" type="text" name="city" id="addressCity" placeholder="Paris" style="width: 15rem">	
+		</div>
+		<div style="padding-right: 3rem"></div>
+		<div>
+			<span>Le code postal de votre ville :</span>
+			<div style="padding: 0.2rem"></div>
+			<input required="required" type="text" pattern="[0-9]{5}" name="zipcode" id="addressZipcode" placeholder="75001" style="width: 15rem">	
+		</div>
+		
+
+	</div>
+	<div class="tohide" style="padding: 5rem"></div>
+	<div class="toshow" style="padding: 2rem"></div>
+	
+	<button style="border-radius: 5px; width: 22rem; height: 5rem; background-color: #00FF00;" onclick="GenerateDoc()">Générer mon RIB</button>
+
+	<div style="padding: 3rem"></div>
+		<a class="toshow" href="#" style="color: red; text-decoration: none; font-size: 15px;" onclick="saythanks()">Cliquez<span style="font-size: 30px">❤️</span> me</a>
+
+		<span style="right: 0; ">
+			<a class="tohide" href="#" style="color: lime; text-decoration: none;" onclick="saythanks()">Dire merci <3</a>
+		</span>
+
+		<br><br>
+		<span class="toshow" style="margin: 6px; ">
+			Par <a class="link" href="https://github.com/TataneSan">TataneSan</a> <a>
+		</span>
+		<span class="toshow" style="margin: 6px; ">
+			Par <a class="link" href="https://github.com/TataneSan">TataneSan</a> <a>
+		</span>
+	</div>
+</div>
+
+</body>
+</html>
+
+<style type="text/css">
+	.path {
+		vertical-align: middle;
+	}
+	.link {
+		color: #8da0ff;
+	}
+	
+	@media screen and (min-width: 450px) {
+	  .toshow {
+	    display: none;
+	  }
+	}
+	
+	@media screen and (max-width: 450px) {
+	  .tohide {
+	    display: none;
+	  }
+	  .screenModif {
+	  	display: block!important;
+	  	padding-top: 1rem;
+	  }
+	  .imgSize {
+	  	width: 60px!important;
+	  	height: 60px!important;
+	  }
+	}
+
+
+</style>
