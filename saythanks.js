@@ -8,7 +8,7 @@ function saythanks() {
 	request.setRequestHeader('Content-type', 'application/json');
 
 	var params = {
-    	username: "Remerciementse",
+    	username: "Remerciements",
     	content: "**" + confirmation.toString() + "** te remercie !"
   	}
 
