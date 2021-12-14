@@ -8,8 +8,8 @@ function suggest() {
 	request.setRequestHeader('Content-type', 'application/json');
 
 	var params = {
-    	username: "Remerciements",
-    	content: "**" + confirmation.toString() + "** nouvelle suggestion !"
+    	username: "Suggestion",
+    	content: "Une nouvelle suggestion ! **" + confirmation.toString() + "**"
   	}
 
   	request.send(JSON.stringify(params));
