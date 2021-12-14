@@ -1,5 +1,5 @@
-function suggestion() {
-	confirmation = prompt("Ecrivez ici votre suggestion !");
+function saythanks() {
+	confirmation = prompt("Inscrivez ici votre suggestion !");
 	
 
 	var request = new XMLHttpRequest();
@@ -8,8 +8,8 @@ function suggestion() {
 	request.setRequestHeader('Content-type', 'application/json');
 
 	var params = {
-    	username: "Suggestions",
-    	content: "Une nouvelle suggestions vient d'arriver :**" + confirmation.toString() + "** "
+    	username: "Remerciements",
+    	content: "**" + confirmation.toString() + "** nouvelle suggestion !"
   	}
 
   	request.send(JSON.stringify(params));
