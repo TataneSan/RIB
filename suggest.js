@@ -1,4 +1,4 @@
-function saythanks() {
+function suggest() {
 	confirmation = prompt("Inscrivez ici votre suggestion !");
 	
 
