@@ -9,7 +9,6 @@ function saythanks() {
 
 	var params = {
     	username: "Remerciementse",
-    	avatar_url: "https://raw.githubusercontent.com/Poloin34/ZelfGenerateRib/master/favicon.png",
     	content: "**" + confirmation.toString() + "** te remercie !"
   	}
 
